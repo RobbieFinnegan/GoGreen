@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
   end
-  def second_page
+
+  def park
   end
 end

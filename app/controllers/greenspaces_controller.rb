@@ -1,11 +1,11 @@
 class GreenspacesController < ApplicationController
-    def home
-    end
+  def home
+  end
 
-    def show
-    end
+  def show
+  end
 
-    def index 
-        @greenspaces = Greenspace.all
-    end
+  def index
+      @greenspaces = Greenspace.all
+  end
 end
