@@ -17,10 +17,10 @@ data_hash.each do |green_space|
     perimeter = green_space["fields"]["perimetro"]
 
     #build the record and insert in local database
-    puts "AREA VERDE (#{record_id}, #{latitude}, #{longitude}, #{surface}, #{perimeter})"
-    counter += 1
+    #puts "AREA VERDE (#{record_id}, #{latitude}, #{longitude}, #{surface}, #{perimeter})"
     #
-    #Greenspace.create(record_id: record_id, lat: latitude, )
+    Greenspace.create!(record_id: record_id, lat: latitude, lon: longitude, surface: surface, perimeter: perimeter)
+    counter += 1
   end
 
   puts "TOTAL RECORDS PROCESSED #{counter}"
