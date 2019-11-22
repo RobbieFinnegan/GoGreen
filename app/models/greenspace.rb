@@ -1,16 +1,9 @@
 class Greenspace < ApplicationRecord
 
-    MINIMAL_SURFACE = 5000
+    MINIMAL_SURFACE = 200000
 
-    #move this to controller
-    def home
-    end
 
-    def show
-    end
-    ######
-
-    def Greenspace.build_from_json
+    def self.build_from_json
     # def self.build_from_json
 
         file = File.read('data/cdmx_areas_verdes_2017.json')
@@ -30,13 +23,14 @@ class Greenspace < ApplicationRecord
 
                 #build the record and insert in local database
                 Greenspace.create!(record_id: record_id, lat: latitude, lon: longitude, surface: surface, perimeter: perimeter)
+                puts "AREA VERDE (#{record_id}, #{latitude}, #{longitude}, #{surface}, #{perimeter})"
+
                 counter += 1
                 #
                 #Greenspace.create(record_id: record_id, lat: latitude, )
             end
 
         end
-
         puts "TOTAL RECORDS PROCESSED #{counter}"
     end
 end
