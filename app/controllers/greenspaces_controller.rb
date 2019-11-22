@@ -4,4 +4,8 @@ class GreenspacesController < ApplicationController
 
     def show
     end
+
+    def index 
+        @greenspaces = Greenspace.all
+    end
 end
