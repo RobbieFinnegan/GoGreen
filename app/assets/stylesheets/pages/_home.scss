@@ -1,7 +1,8 @@
 // Specific CSS for your home-page
-body {
-  background-image: url("https://res.cloudinary.com/le-wagon-go-green/image/upload/v1574458167/image_qglyzu.png");
+.html-home body {
+  background-image: url(https://res.cloudinary.com/le-wagon-go-green/image/upload/v1574458167/image_qglyzu.png);
   background-size: cover;
-  background-position: center;
+  background-position: bottom left;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
