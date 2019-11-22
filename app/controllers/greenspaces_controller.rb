@@ -1,0 +1,2 @@
+class GreenspacesController < ApplicationController
+end
