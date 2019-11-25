@@ -1,3 +1,7 @@
+.row {
+   padding-bottom: 2.5rem;
+}
+
 .list-green a {
   color: #507255;
   opacity: 0.95;
@@ -22,8 +26,6 @@
     margin: 0;
     padding: 0;
     border-top: solid 1px #507255;
-    position: absolute;
-    bottom: 0;
     height: 2.5rem;
     right: 0;
 }
