@@ -1,0 +1,29 @@
+.list-green a {
+  color: #507255;
+  opacity: 0.95;
+  font-family: 'Inconsolata', monospace;
+      float: right;
+}
+.list-green {
+  color: #507255 ;
+  list-style: none !important;
+    display: block;
+    list-style-type: none;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.new-form-green {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: solid 1px #507255;
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;
+    right: 0;
+}
