@@ -1,12 +1,28 @@
 // Specific CSS for your home-page
+
+
+
 .html-home body {
-  background-image: url(https://res.cloudinary.com/le-wagon-go-green/image/upload/v1574458167/image_qglyzu.png);
+  background-image: url("https://res.cloudinary.com/le-wagon-go-green/image/upload/v1574706649/Go%20Green/CoverImage25percentBlack_jx0zoj.jpg");
   background-size: cover;
   background-position: bottom left;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
 
+
+
+h1 {
+  color: #fff;
+  font-size: 40px;
+}
+
 .btn-green {
-  background-color: green;
+  background-color: #507255;
+  color: #C6C5B9;
+  font-size: 24px;
+}
+
+.home {
+  margin-top:100px;
 }
