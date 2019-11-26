@@ -8,5 +8,12 @@ class GreenspacesController < ApplicationController
 
   def index
       @greenspaces = Greenspace.all
+
+      @markers = @greenspaces.map do |greenspace|
+        {
+          lat: greenspace.latitude,
+          lon: greenspace.longitude
+        }
+    end
   end
 end
