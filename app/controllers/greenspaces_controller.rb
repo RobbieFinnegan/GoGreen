@@ -11,6 +11,6 @@ class GreenspacesController < ApplicationController
     coordinates = Geocoder.search(address).first.coordinates
     puts coordinates.inspect #lat & lon
     @greenspaces = Greenspace.near(coordinates, 5, units: :km)
-    puts @greenspaces.length
+    puts @greenspaces.inspect
   end
 end
