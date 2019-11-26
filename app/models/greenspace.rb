@@ -1,5 +1,8 @@
 class Greenspace < ApplicationRecord
 
+    geocoded_by :address
+    after_validation :geocode, if:  :will_wave_change_to_address?
+
     MINIMAL_SURFACE = 5000
 
 
