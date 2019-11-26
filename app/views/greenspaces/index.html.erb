@@ -1,7 +1,42 @@
-<h1>Map with greenspaces</h1>
-<div 
-id="map"
-style="background-color: yellow; width:100%; height:600px"
-></div>
 
-<%= javascript_pack_tag 'map' %>
+<div class="container">
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Enter Neighborhood (ex: Condesa, Zona Rosa, etc...)" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+  <div class="row">
+    <div class="card-category col-sm-7 mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dt2bnlehf/image/upload/v1574470273/Green%20Space/map_screen_shot_q3daap.jpg)">
+      Map Picture Placeholder
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card-gs card-gs-first offset-md-1">
+        <img src="https://res.cloudinary.com/dt2bnlehf/image/upload/v1574455756/Green%20Space/Screen_Shot_2019-11-19_at_7.48.59_PM_utavw1.png" />
+        <div class="card-gs-infos">
+          <div>
+            <h2>Title here</h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-gs-pricing">100m</h2>
+        </div>
+      </div>
+
+      <div class="card-gs card-gs-first offset-md-1">
+        <img src="https://res.cloudinary.com/dt2bnlehf/image/upload/v1574455756/Green%20Space/Screen_Shot_2019-11-19_at_7.48.59_PM_utavw1.png" />
+        <div class="card-gs-infos">
+          <div>
+            <h2>Title here</h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-gs-pricing">100m</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAPBOX BELOW -->
+<!--   <div id='map'></div>
+< javascript_pack_tag 'map' %> -->
