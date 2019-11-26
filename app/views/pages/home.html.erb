@@ -6,12 +6,22 @@
 <html class='html-home'>
   <div class="home text-center">
     <h1>Find a green space in Mexico City</h1>
-    <a href="/second" class="btn btn-green">Show nearest green spaces</button></a>
-
-
+      <div class="search-bar-container">
+        <nav class="search-bar">
+          <%= form_tag greenspaces_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              id: "green-space-address",
+              class: "form-control",
+              placeholder: "Enter Address"
+            %>
+            <%= submit_tag "Show nearest green spaces", class: "btn btn-green" %>
+          <% end %>
+        </nav>
+      </div>
 
   </div>
 </html>
 
-
+<%= javascript_pack_tag 'places' %>
 <!-- Implement footer down here -->

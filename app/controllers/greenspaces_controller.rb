@@ -1,12 +1,16 @@
 class GreenspacesController < ApplicationController
   def home
-
   end
 
   def show
   end
 
   def index
-      @greenspaces = Greenspace.all
+    address = params[:query]
+    puts address
+    coordinates = Geocoder.search(address).first.coordinates
+    puts coordinates.inspect #lat & lon
+    @greenspaces = Greenspace.near(coordinates, 5, units: :km)
+    puts @greenspaces.length
   end
 end
