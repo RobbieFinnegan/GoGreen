@@ -10,7 +10,15 @@
   min-height: 100vh;
 }
 
+.search-bar-container {
+  vertical-align: middle;
+}
 
+.search-bar {
+  display: inline-block;
+  padding: 20px;
+
+}
 
 h1 {
   color: #fff;
@@ -21,6 +29,8 @@ h1 {
   background-color: #507255;
   color: #C6C5B9;
   font-size: 24px;
+  padding: 10px;
+  margin-top: 50px;
 }
 
 .home {
