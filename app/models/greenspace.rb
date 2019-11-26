@@ -1,7 +1,7 @@
 class Greenspace < ApplicationRecord
   geocoded_by :description, latitude: :lat, longitude: :lon
   after_validation :geocode
-  MINIMAL_SURFACE = 200000
+  MINIMAL_SURFACE = 5000
 
 
     def self.build_from_json
