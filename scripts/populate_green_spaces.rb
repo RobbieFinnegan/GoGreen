@@ -11,10 +11,10 @@ counter = 0
 MINIMAL_SURFACE = 5000
 
 data_hash.each do |green_space|
-  
+
  if green_space["fields"]["geo_point_2d"] && green_space["fields"]["superficie"].to_f > MINIMAL_SURFACE
     record_id = green_space["recordid"]
-    latitude = green_space["fields"]["geo_point_2d"][0] 
+    latitude = green_space["fields"]["geo_point_2d"][0]
     longitude = green_space["fields"]["geo_point_2d"][0]
     # combine if necessary
     # geolocation = [latitude, longitude]
