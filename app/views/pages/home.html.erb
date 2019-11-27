@@ -2,24 +2,31 @@
 <!-- https://www.figma.com/file/N1cch7b3COVEoHQX6paTPZ/Green-Space?node-id=66%3A117 -->
 <!-- 1. Install bootstrap into the project -->
 <!-- 2. Translate design into HTMl css and JS -->
+<style>
+  body {
+    background-image: url('<%= image_url("home_banner.jpg") %>');
+    background-size: cover;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    }
+</style>
+  <div class="home text-center">
+    <h1>Find a green space in Mexico City</h1>
+      <div class="search-bar-container">
+        <nav class="search-bar">
+          <%= form_tag greenspaces_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              id: "green-space-address",
+              class: "form-control",
+              placeholder: "Enter Address"
+            %>
+            <%= submit_tag "Show nearest green spaces", class: "btn btn-green" %>
+          <% end %>
+        </nav>
+      </div>
 
-<div class="home text-center">
-  <h1>Find a green space in Mexico City</h1>
-    <div class="search-bar-container">
-      <nav class="search-bar">
-        <%= form_tag greenspaces_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            id: "green-space-address",
-            class: "form-control",
-            placeholder: "Enter Address"
-          %>
-          <%= submit_tag "Show nearest green spaces", class: "btn btn-green" %>
-        <% end %>
-      </nav>
-    </div>
-
-</div>
-
+  </div>
 <%= javascript_pack_tag 'places' %>
 <!-- Implement footer down here -->
