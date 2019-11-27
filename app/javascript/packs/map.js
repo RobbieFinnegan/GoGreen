@@ -32,3 +32,12 @@ new mapboxgl.Marker(element)
   .addTp(map);
 });
 
+
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+// [...]
+if (mapElement) {
+  // [...]
+  map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+                                      mapboxgl: mapboxgl }));
+}
+
