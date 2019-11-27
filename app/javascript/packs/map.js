@@ -15,3 +15,20 @@ const initMap = () => {
 
 initMap()
 
+markers.forEach((marker) => {
+
+  const popup = new mapbox.gl.Popup().setHTML(marker.infoWindwo);
+
+  const element = document.createElement('div');
+  element.className = 'marker';
+  element.style.bacgroundImage = `url(${marker.image_url}')`;
+  element.style.backgroundSize = 'contain';
+  element.style.width = '25px';
+  element.style.height = '25px';
+
+new mapboxgl.Marker(element)
+  .setLonLat([marker.lon, marker.lat])
+  .setPopup(popup)
+  .addTp(map);
+});
+
