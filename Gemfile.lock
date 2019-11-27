@@ -197,6 +197,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  dotenv
   dotenv-rails
   font-awesome-sass (~> 5.6.1)
   geocoder
