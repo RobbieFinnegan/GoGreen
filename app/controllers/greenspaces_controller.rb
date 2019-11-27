@@ -7,15 +7,20 @@ class GreenspacesController < ApplicationController
 
   def index
     address = params[:query]
-    puts address
-    coordinates = Geocoder.search(address).first.coordinates
-    puts coordinates.inspect #lat & lon
-    @greenspaces = Greenspace.near(coordinates, 5, units: :km)
+    if (address)
+      puts address
+      coordinates = Geocoder.search(address).first.coordinates
+      puts coordinates.inspect #lat & lon
+      @greenspaces = Greenspace.near(coordinates, 5, units: :km)
+    else
+      @greenspaces = Greenspace.all.first(5)
+    end
     puts @greenspaces.inspect
     @markers = @greenspaces.map do |greenspace|
         {
-          lat: greenspace.latitude,
-          lon: greenspace.longitude
+          lat: greenspace.lat,
+          lon: greenspace.lon
         }
+    end
   end
 end
