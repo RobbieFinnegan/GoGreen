@@ -17,15 +17,6 @@ class GreenspacesController < ApplicationController
       @greenspaces = Greenspace.all.first(5)
     end
 
-      puts @greenspaces.inspect
 
-      @markers = @greenspaces.map do |greenspace|
-        {
-          latitude: greenspace.latitude,
-          longitude: greenspace.longitude,
-          infoWindow: render_to_string(partial: "infowindow", locals: { greenspace: greenspace }),
-          image_url: helpers.assets_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
-        }
-    end
   end
 end

@@ -24,7 +24,7 @@ data_hash.each do |green_space|
     #build the record and insert in local database
     puts "AREA VERDE (#{record_id}, #{latitude}, #{longitude}, #{surface}, #{perimeter})"
     #
-    Greenspace.create!(record_id: record_id, lat: latitude, lon: longitude, surface: surface, perimeter: perimeter)
+    Greenspace.create!(record_id: record_id, latitude: latitude, longitude: longitude, surface: surface, perimeter: perimeter)
     counter += 1
   end
 end

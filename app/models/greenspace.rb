@@ -5,6 +5,16 @@ class Greenspace < ApplicationRecord
   MINIMAL_SURFACE = 5000
 
 
+  def self.populate_map
+    rand_records = all.sample(5)
+    rand_records.map do | record |
+      {:lat => record.latitude, :lng => record.longitude }
+
+    end
+  end
+
+
+
     def self.build_from_json
     # def self.build_from_json
 
