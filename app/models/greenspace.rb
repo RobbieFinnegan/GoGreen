@@ -24,7 +24,7 @@ class Greenspace < ApplicationRecord
                 perimeter = green_space["fields"]["perimetro"]
 
                 # build the record and insert in local database
-                Greenspace.create!(record_id: record_id, lat: latitude, lon: longitude, surface: surface, perimeter: perimeter)
+                Greenspace.create!(record_id: record_id, latitude: latitude, longitude: longitude, surface: surface, perimeter: perimeter)
                 puts "AREA VERDE (#{record_id}, #{latitude}, #{longitude}, #{surface}, #{perimeter})"
 
                 counter += 1
