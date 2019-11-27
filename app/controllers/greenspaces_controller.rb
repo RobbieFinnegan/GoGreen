@@ -24,8 +24,8 @@ class GreenspacesController < ApplicationController
       {
         lat: greenspace.latitude,
         lon: greenspace.lon,
-        infoWindow: render_to_string)partial: "infowindow", locals: { greenspace: greenspace}),
-      }image_url: helpers.assets_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        infoWindow: render_to_string(partial: "infowindow", locals: { greenspace: greenspace}),
+      image_url: helpers.assets_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
   end
