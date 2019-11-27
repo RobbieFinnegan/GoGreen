@@ -8,9 +8,20 @@ class GreenspacesController < ApplicationController
   def index
     address = params[:query]
     puts address
+
     coordinates = Geocoder.search(address).first.coordinates
-    puts coordinates.inspect #lat & lon
+    puts coordinates.inspect lat & lon
+
     @greenspaces = Greenspace.near(coordinates, 5, units: :km)
     puts @greenspaces.inspect
+
+    @markers = @greenspaces.map do |greenspace|
+      {
+        lat: greenspace.latitude,
+        lon: greenspace.lon,
+        infoWindow: render_to_string)partial: "infowindow", locals: { greenspace: greenspace}),
+      }image_url: helpers.assets_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+    end
   end
 end
