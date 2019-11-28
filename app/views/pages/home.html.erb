@@ -12,7 +12,8 @@
     }
 </style>
   <div class="home text-center">
-    <h1 style='color:green'>Find a green space in Mexico City</h1>
+    <div class="home-container">
+      <h1 class="title">Find a green space in Mexico City</h1>
       <div class="search-bar-container">
         <nav class="search-bar">
           <%= form_tag greenspaces_path, method: :get do %>
@@ -26,6 +27,7 @@
           <% end %>
         </nav>
       </div>
+    </div>
 
   </div>
 <%= javascript_pack_tag 'places' %>
