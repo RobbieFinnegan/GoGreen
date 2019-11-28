@@ -11,7 +11,7 @@
       id='map'
       style="width: 100%; height: 80vh;"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-      data-markers="<%= Greenspace.populate_map.to_json %>">
+      data-markers="<%= @greenspaces.to_json %>">
       </div>
     </div>
     <br>

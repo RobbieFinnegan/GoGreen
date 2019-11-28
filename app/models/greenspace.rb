@@ -1,6 +1,6 @@
 class Greenspace < ApplicationRecord
 
-  geocoded_by :description, latitude: :lat, longitude: :lon
+  geocoded_by :description
   after_validation :geocode
   MINIMAL_SURFACE = 5000
 
