@@ -33,10 +33,11 @@ class Greenspace < ApplicationRecord
                 surface = green_space["fields"]["superficie"]
                 perimeter = green_space["fields"]["perimetro"]
                 name = green_space["fields"]["nombre"]
+                description = green_space["fields"]["direccion"]
                 picture = "https://cdn.theculturetrip.com/wp-content/uploads/2017/06/img_6121-min.jpg"
 
                 # build the record and insert in local database
-                Greenspace.create!(picture: picture, name: name, record_id: record_id, latitude: latitude, longitude: longitude, surface: surface, perimeter: perimeter)
+                Greenspace.create!(description: description, picture: picture, name: name, record_id: record_id, latitude: latitude, longitude: longitude, surface: surface, perimeter: perimeter)
                 puts "AREA VERDE (#{record_id}, #{latitude}, #{longitude}, #{surface}, #{perimeter})"
 
                 counter += 1
