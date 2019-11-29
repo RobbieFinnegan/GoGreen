@@ -10,24 +10,26 @@
   <div id="map-container">
       <div id='map'
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-      data-markers="<%= @greenspaces.to_json %>">
+      data-markers="<%= @greenspaces_json.to_json %>">
       </div>
 
       <div id="map-cards">
         <div class="container-fluid">
+          <%= @greenspaces.each do |greenspace| %>
           <div class="row">
             <div class="col-12">
               <div class="card-gs">
-                <img src="https://res.cloudinary.com/dt2bnlehf/image/upload/v1574455756/Green%20Space/Screen_Shot_2019-11-19_at_7.48.59_PM_utavw1.png" />
+                <h2> <%= greenspace.name %> </h2>
+                <%= image_tag greenspace.picture %>
                 <div class="card-gs-infos">
                   <div>
                   </div>
                   <h2 class="card-gs-pricing">
                 </div>
               </div>
-
             </div>
           </div>
+          <% end %>
         </div>
       </div>
   </div>

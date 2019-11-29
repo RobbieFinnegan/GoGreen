@@ -24,7 +24,7 @@ class Greenspace < ApplicationRecord
 
         data_hash.each do |green_space|
 
-          if green_space["fields"]["geo_point_2d"] && green_space["fields"]["superficie"].to_f > MINIMAL_SURFACE
+          if (not green_space["fields"]["nombre"].blank?) and green_space["fields"]["geo_point_2d"] && green_space["fields"]["superficie"].to_f > MINIMAL_SURFACE
                 record_id = green_space["recordid"]
                 latitude = green_space["fields"]["geo_point_2d"][0]
                 longitude = green_space["fields"]["geo_point_2d"][1]
@@ -32,9 +32,11 @@ class Greenspace < ApplicationRecord
                 # geolocation = [latitude, longitude]
                 surface = green_space["fields"]["superficie"]
                 perimeter = green_space["fields"]["perimetro"]
+                name = green_space["fields"]["nombre"]
+                picture = "https://cdn.theculturetrip.com/wp-content/uploads/2017/06/img_6121-min.jpg"
 
                 # build the record and insert in local database
-                Greenspace.create!(record_id: record_id, latitude: latitude, longitude: longitude, surface: surface, perimeter: perimeter)
+                Greenspace.create!(picture: picture, name: name, record_id: record_id, latitude: latitude, longitude: longitude, surface: surface, perimeter: perimeter)
                 puts "AREA VERDE (#{record_id}, #{latitude}, #{longitude}, #{surface}, #{perimeter})"
 
                 counter += 1
